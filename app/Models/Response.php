@@ -16,6 +16,7 @@ class Response extends Model
     static $question5 = "If Yes, what method accessing information technology?";
     static $question6 = "Get distracted in class when they bring their phones to class";
     static $question7 = "Get distracted by information technology media after school";
+    static $question8 = "Visit game centers or play games more than reading their books";
     static $question9 = "Are more active on social media than their academics";
     static $question10 = "Are exposed to pornographic information which affects their academics negatively";
     static $question11 = "Are addicted to television after schools hours";
@@ -33,4 +34,10 @@ class Response extends Model
     static $question23 = "Are more likely to loose their data on laptops or mobile phones than having physical books";
     static $question24 = "Are more serious in attending physical classes than online classes";
     static $question25 = "Are you motivated to read physical books than reading from electronic devices";
+
+    protected $casts = [
+        'question_answer' => 'array'
+    ];
+
+    protected $fillable = ['email', 'question_answer'];
 }
