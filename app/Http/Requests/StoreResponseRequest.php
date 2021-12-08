@@ -25,6 +25,10 @@ class StoreResponseRequest extends FormRequest
     {
         return [
             'email' => ['email', 'required'],
+            'age' => ['required'],
+            'gender' => ['required'],
+            'class' => ['required'],
+            'location' => ['required'],
             'question1' => ['required'],
             'question2' => ['required'],
             'question3' => ['required'],
@@ -47,9 +51,6 @@ class StoreResponseRequest extends FormRequest
             'question20' => ['required'],
             'question21' => ['required'],
             'question22' => ['required'],
-            'question23' => ['required'],
-            'question24' => ['required'],
-            'question25' => ['required']
         ];
     }
 }
