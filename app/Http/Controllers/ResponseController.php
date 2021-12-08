@@ -37,42 +37,37 @@ class ResponseController extends Controller
      */
     public function store(StoreResponseRequest $request)
     {
-        // $Response = Response::class;
-        $questionAnswer = [
-            Response::$question1 => $request->question1,
-            Response::$question2 => $request->question2,
-            Response::$question3 => $request->question3,
-            Response::$question4 => $request->question4,
-            Response::$question5 => $request->question5,
-            Response::$question6 => $request->question6,
-            Response::$question7 => $request->question7,
-            Response::$question8 => $request->question8,
-            Response::$question9 => $request->question9,
-            Response::$question10 => $request->question10,
-            Response::$question11 => $request->question11,
-            Response::$question12 => $request->question12,
-            Response::$question13 => $request->question13,
-            Response::$question15 => $request->question15,
-            Response::$question16 => $request->question16,
-            Response::$question17 => $request->question17,
-            Response::$question18 => $request->question18,
-            Response::$question19 => $request->question19,
-            Response::$question20 => $request->question20,
-            Response::$question21 => $request->question21,
-            Response::$question22 => $request->question22,
-            Response::$question23 => $request->question23,
-            Response::$question24 => $request->question24,
-            Response::$question25 => $request->question25,
-        ];
-
-        // dd(json_encode($questionAnswer));
-
-        Response::create([
+        $response = Response::create([
             'email' => $request->email,
-            'question_answer' => json_encode($questionAnswer)
+            'age' => $request->age,
+            'gender' => $request->gender,
+            'class' => $request->class,
+            'location' => $request->location,
+            'question1' => $request->question1,
+            'question2'  => $request->question2,
+            'question3'  => $request->question3,
+            'question4'  => $request->question4,
+            'question5'  => $request->question5,
+            'question6'  => $request->question6,
+            'question7'  => $request->question7,
+            'question8'  => $request->question8,
+            'question9'  => $request->question9,
+            'question10' => $request->question10,
+            'question11' => $request->question11,
+            'question12' => $request->question12,
+            'question13' => $request->question13,
+            'question14' => $request->question14,
+            'question15' => $request->question15,
+            'question16' => $request->question16,
+            'question17' => $request->question17,
+            'question18' => $request->question18,
+            'question19' => $request->question19,
+            'question20' => $request->question20,
+            'question21' => $request->question21,
+            'question22' => $request->question22,
         ]);
 
-        return response('Response recorded! Thanks');
+        return response("Response recorded! Thanks, $response");
     }
 
     /**
