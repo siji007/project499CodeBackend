@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Response;
 use App\Http\Requests\StoreResponseRequest;
 use App\Http\Requests\UpdateResponseRequest;
+use Illuminate\Http\Request;
 
 class ResponseController extends Controller
 {
@@ -35,8 +36,9 @@ class ResponseController extends Controller
      * @param  \App\Http\Requests\StoreResponseRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreResponseRequest $request)
+    public function store(Request $request)
     {
+        dd($request);
         $response = Response::create([
             'email' => $request->email,
             'age' => $request->age,
