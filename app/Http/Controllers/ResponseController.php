@@ -38,7 +38,6 @@ class ResponseController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
         $response = Response::create([
             'email' => $request->email,
             'age' => $request->age,
